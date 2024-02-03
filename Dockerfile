@@ -5,4 +5,4 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-slim
 COPY --from=BUILD /target/mallergy-0.0.1-SNAPSHOT.jar mallergy.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "demo.jar"]
+ENTRYPOINT ["java", "-jar", "mallergy.jar"]
